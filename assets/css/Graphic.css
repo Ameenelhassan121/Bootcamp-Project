@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    font-family: "cairo",sans-serif;
+    box-sizing: border-box;
+}
+
+        /* header */
+header{
+    color: white;
+    box-shadow: 0 0 10px #ddd;
+    position: relative;
+    z-index: 20;
+    margin-bottom: 40px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    width: 85%;
+    margin-inline: auto;
+
+}
+header .logo{
+    font-size:26px ;
+    font-weight:bold ;
+    height: 72px;
+    color: rgb(61, 63, 199);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .main-nav{
+    display: flex;
+    position: relative;
+}
+.in-nav1 ul{
+    position: absolute;
+    top: 64px;
+    background-color: white;
+    border-bottom: 4px solid rgb(58, 61, 221) ;
+    border-top: 2px solid #ddd;
+    display: none;
+    margin-block: 10px;
+    left: 97px;
+}
+.in-nav1 ul a{
+    display: flex;
+    padding-inline: 15px;
+    padding-block: 20px;
+    color: rgb(0, 0, 0);
+}
+.in-nav1 ul a:hover{
+    background-color: #fafafa;
+    color: rgb(61, 63, 199);
+    transition: 0.5s;
+}
+.in-nav1:hover>ul{
+    display: block;
+    z-index: 10;
+}
+header .main-nav > li > a{
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    padding: 0 30px;
+    transition: 0.3s;
+}
+
+header .drop-down{
+    font-size:20px ;
+    font-weight:bold ;
+    height: 72px;
+    color: rgb(155, 127, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: relative;
+    margin-block: 20px;
+}
+header .main-nav > li > a:hover{
+    background-color: #fafafa;
+    border-top:4px solid rgb(58, 61, 221) ;
+    color: rgb(61, 63, 199);
+    transition: 0.3s;
+}
+header .drop-down ul{
+    position: absolute;
+    top: 90px;
+    background-color: white;
+    border-bottom: 4px solid rgb(58, 61, 221) ;
+    display: none;
+}
+header .drop-down:hover> ul{
+    top: 73px;
+    transition: 0.8s;
+    display: block;
+    border-top: 2px solid #ddd;
+    padding: 10px;
+    z-index: 10;
+}
+header .drop-down ul li a{
+    display: flex;
+    color: rgb(0,0,0);
+    padding-block: 10px;
+}
+header .drop-down ul li :hover{
+    background-color: #fafafa;
+    color: rgb(61, 63, 199);
+    transition: 0.5s;
+}
+@media(max-width: 900px){
+    header .drop-down{
+        display: flex;
+    }
+    header .main-nav{
+        display: none;
+    }
+}
+    /* header */
+    /* spiecialites */
+
+
+.spiecialites .container{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-inline: auto;
+    max-width: 276px;
+}
+@media(max-width:970px){
+    .spiecialites .container{
+        max-width: 400px;
+        margin-inline: auto
+    }
+}
+.m{
+    margin: 20px;
+    margin-block: 50px;
+}
+.spiecialites h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff9500;
+}
+.sp{
+    border-radius: 125px 20px 125px 20px;
+    width: 305px;
+    height: 248px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px 2px;
+    padding: 4px;
+}
+.sp:hover{
+    transform: translateY(-20px);
+    transition: .5s;
+}
+
+.sp h3{
+    margin-block: 10px 10px;
+}
+.sp p{
+    margin-block: 5px 15px;
+}
+.sp a{
+    border: 2px solid black;
+    border-radius: 15px;
+    padding:5px 10px;
+    color: white;
+}
+.sp a::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Graphic{
+    border-top: 10px solid #ff9d00;
+}
+.Graphic h3{
+    color: #ff9d00;
+}
+.Graphic a{
+    color: #ff9d00;
+    border: 2px solid #ff9d00;
+
+}
+.Graphic a:hover{
+    color: white;
+    background-color: #ff9d00;
+    transition: .5s;
+}
+.Motion{
+    border-top: 10px solid #167562;
+}
+.Motion h3{
+    color: #167562;
+}
+.Motion a{
+    color: #167562;
+    border: 2px solid #167562;
+}
+.Motion a:hover{
+    color: white;
+    background-color: #167562;
+    transition: .5s;
+}
+.Montier{
+    border-top: 10px solid #1e699b;
+}
+.Montier h3{
+    color: #1e699b;
+}
+.Montier a{
+    color: #1e699b;
+    border: 2px solid #1e699b;
+}
+.Montier a:hover{
+    color: white;
+    background-color: #1e699b;
+    transition: .5s;
+}
+
+
+
+
+    /* footer */
+footer{
+    background-color: rgb(65, 59, 59);
+}
+footer .container{
+    display: flex;
+    justify-content: space-around;
+}
+footer .container h3{
+    color: #f0f0f0;
+    font-weight: 400;
+    padding: 10px;
+}

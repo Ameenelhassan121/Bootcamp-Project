@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    font-family: "cairo",sans-serif;
+    box-sizing: border-box;
+}
+        /* header */
+header{
+    color: white;
+    box-shadow: 0 0 10px #ddd;
+    position: relative;
+    z-index: 20;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    width: 85%;
+    margin-inline: auto;
+
+}
+header .logo{
+    font-size:26px ;
+    font-weight:bold ;
+    height: 72px;
+    color: rgb(61, 63, 199);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .main-nav{
+    display: flex;
+    position: relative;
+}
+.in-nav1 ul{
+    position: absolute;
+    top: 64px;
+    background-color: white;
+    border-bottom: 4px solid rgb(58, 61, 221) ;
+    border-top: 2px solid #ddd;
+    display: none;
+    margin-block: 10px;
+    left: 97px;
+}
+.in-nav1 ul a{
+    display: flex;
+    padding-inline: 15px;
+    padding-block: 20px;
+    color: rgb(0, 0, 0);
+}
+.in-nav1 ul a:hover{
+    background-color: #fafafa;
+    color: rgb(61, 63, 199);
+    transition: 0.5s;
+}
+.in-nav1:hover>ul{
+    display: block;
+    z-index: 10;
+}
+header .main-nav > li > a{
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    padding: 0 30px;
+    transition: 0.3s;
+}
+
+header .drop-down{
+    font-size:20px ;
+    font-weight:bold ;
+    height: 72px;
+    color: rgb(155, 127, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: relative;
+    margin-block: 20px;
+}
+header .main-nav > li > a:hover{
+    background-color: #fafafa;
+    border-top:4px solid rgb(58, 61, 221) ;
+    color: rgb(61, 63, 199);
+    transition: 0.3s;
+}
+header .drop-down ul{
+    position: absolute;
+    top: 90px;
+    background-color: white;
+    border-bottom: 4px solid rgb(58, 61, 221) ;
+    display: none;
+}
+header .drop-down:hover> ul{
+    top: 73px;
+    transition: 0.8s;
+    display: block;
+    border-top: 2px solid #ddd;
+    padding: 10px;
+    z-index: 10;
+}
+header .drop-down ul li a{
+    display: flex;
+    color: rgb(0,0,0);
+    padding-block: 10px;
+}
+header .drop-down ul li :hover{
+    background-color: #fafafa;
+    color: rgb(61, 63, 199);
+    transition: 0.5s;
+}
+@media(max-width: 900px){
+    header .drop-down{
+        display: flex;
+
+    }
+    header .main-nav{
+        display: none;
+    }
+}
+    /* header */
+    /* courses */
+    
+.courses{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+    position: relative;
+    margin-inline: auto ;
+}
+.courses-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 670px;
+    margin-inline: auto;
+}
+.courses .courses-container .box{
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-inline: auto;
+    width: 322px;
+}
+.courses .courses-container .box .img-holder{
+    position: relative;
+    overflow: hidden;
+    margin-inline: auto;
+    height: 200px;
+}
+.courses .courses-container .box .img-holder::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.courses .courses-container .box .img-holder::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 0 120px 500px;
+    border-color:transparent transparent #ffff transparent  ;
+}
+.courses .courses-container .box:hover .img-holder::after{
+    border-width: 120px 500px 120px 0;
+    transition: 0.5s;
+}
+.courses .courses-container .box h2{
+    border-bottom: 7px solid red;
+    border-radius: 20px ;
+    width: fit-content;
+    margin: auto;
+}
+
+.courses .courses-container .box p{
+    line-height: 2;
+    font-size: 20px;
+    margin: 0 0;
+    padding: 25px;
+    color: rgb(83, 80, 80);
+}
+.courses .courses-container .box a{
+    border: 3px solid red;
+    display: block;
+    width: fit-content;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 auto 30px;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+.courses .courses-container .box .img-holder img{
+    max-width: 100%;
+    height: 100%;
+}
+
+.courses .courses-container .programming a{
+    border-color:  #4a4f74;
+    color: #4a4f74;
+    background:linear-gradient(to right,#4a4f74 50%,#fafafa 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: .5s;
+}
+.courses .courses-container .programming a:hover{
+    background-position: left bottom;
+    color: #fafafa;
+}
+.courses .courses-container .programming .img-holder::before{
+    background-color: #4a4f7499;
+}
+.courses .courses-container .programming h2{
+    border-bottom: 7px solid #4a4f74;
+}
+
+.courses .courses-container .Graphic a{
+    border-color:  #ff9500;
+    color: #ff9500;
+    background:linear-gradient(to right,#ff9500 50%,#fafafa 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: .5s;
+}
+.courses .courses-container .Graphic a:hover{
+    background-position: left bottom;
+    color: #fafafa;
+}
+.courses .courses-container .Graphic .img-holder::before{
+    background-color: #ff95006e;
+}
+.courses .courses-container .Graphic h2{
+    border-bottom: 7px solid #ff9500;
+}
+
+.courses .courses-container .Marketing a{
+    border-color:  #007aff;
+    color: #007aff;
+    background:linear-gradient(to right,#007aff 50%,#fafafa 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: .5s;
+}
+.courses .courses-container .Marketing a:hover{
+    background-position: left bottom;
+    color: #fafafa;
+}
+.courses .courses-container .Marketing .img-holder::before{
+    background-color: #007bff60;
+}
+.courses .courses-container .Marketing h2{
+    border-bottom: 7px solid #007aff;
+}
+
+@media(max-width:733px){
+.courses-container{
+    width: 300px;
+    }
+}
+
+.courses .courses-container .Language a{
+    border-color:  #ff2d55;
+    color: #ff2d55;
+    background:linear-gradient(to right,#ff2d55 50%,#fafafa 50% );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: .5s;
+}
+.courses .courses-container .Language a:hover{
+    background-position: left bottom;
+    color: #fafafa;
+}
+.courses .courses-container .Language .img-holder::before{
+    background-color: #ff2d5599;
+}
+.courses .courses-container .Language h2{
+    border-bottom: 7px solid #ff2d55;
+}
+
+    /* footer */
+footer{
+    background-color: rgb(65, 59, 59);
+}
+footer .container{
+    display: block;
+    width: 347px;
+    margin-inline: auto;
+}
+footer .container h3{
+    color: #f0f0f0;
+    font-weight: 400;
+}
+footer .container p{
+    margin-inline: auto;
+    width: 114px;
+    padding-inline: 10px;
+    color: #f0f0f0;
+    font-weight: 300;
+    padding: 10px;
+}
+footer .container a{
+    color: #f0f0f0;
+    padding: 3px;
+}
+footer .container a:hover{
+    color: #c23131;
+}
+    /* footer */
