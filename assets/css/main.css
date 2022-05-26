@@ -136,10 +136,10 @@ header .drop-down ul li :hover{
 }
 .courses-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(300px, 2fr));
     gap: 40px;
-    max-width: 670px;
-    margin-inline: auto;
+    margin-inline: 10px;
+
 }
 .courses .courses-container .box{
     text-align: center;
@@ -260,12 +260,6 @@ header .drop-down ul li :hover{
     border-bottom: 7px solid #007aff;
 }
 
-@media(max-width:733px){
-.courses-container{
-    width: 300px;
-    }
-}
-
 .courses .courses-container .Language a{
     border-color:  #ff2d55;
     color: #ff2d55;
@@ -289,20 +283,14 @@ header .drop-down ul li :hover{
 footer{
     background-color: rgb(65, 59, 59);
 }
-footer .container{
-    display: block;
-    width: 347px;
-    margin-inline: auto;
-}
+
 footer .container h3{
     color: #f0f0f0;
+    text-align: center;
     font-weight: 400;
 }
 footer .container p{
-    margin-inline: auto;
-    width: 114px;
-    padding-inline: 10px;
-    color: #f0f0f0;
+    text-align: center;
     font-weight: 300;
     padding: 10px;
 }
