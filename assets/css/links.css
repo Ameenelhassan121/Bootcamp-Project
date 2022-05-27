@@ -83,7 +83,6 @@ header .drop-down{
     justify-content: center;
     display: none;
     position: relative;
-    margin-block: 20px;
 }
 header .main-nav > li > a:hover{
     background-color: #fafafa;
@@ -93,14 +92,14 @@ header .main-nav > li > a:hover{
 }
 header .drop-down ul{
     position: absolute;
-    top: 90px;
+    top: 72px;
     background-color: white;
     border-bottom: 4px solid rgb(58, 61, 221);
     max-height: 0;
     overflow: hidden;
 }
 header .drop-down:hover> ul{
-    top: 73px;
+    top: 72px;
     transition: 0.8s;
     max-height: 400px;
     border-top: 2px solid #ddd;
