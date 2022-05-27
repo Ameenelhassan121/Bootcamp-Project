@@ -1,20 +1,19 @@
 *{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    outline: none;
-    font-family: "cairo",sans-serif;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+outline: none;
+font-family: "cairo",sans-serif;
+box-sizing: border-box;
 }
 
-        /* header */
+/* header */
 header{
     color: white;
     box-shadow: 0 0 10px #ddd;
     position: relative;
     z-index: 20;
-    margin-bottom: 40px;
 }
 header .container{
     display: flex;
@@ -22,7 +21,7 @@ header .container{
     align-items: center;
     position: relative;
     flex-wrap: wrap;
-    width: 85%;
+    width: 80%;
     margin-inline: auto;
 
 }
@@ -96,13 +95,14 @@ header .drop-down ul{
     position: absolute;
     top: 90px;
     background-color: white;
-    border-bottom: 4px solid rgb(58, 61, 221) ;
-    display: none;
+    border-bottom: 4px solid rgb(58, 61, 221);
+    max-height: 0;
+    overflow: hidden;
 }
 header .drop-down:hover> ul{
     top: 73px;
     transition: 0.8s;
-    display: block;
+    max-height: 400px;
     border-top: 2px solid #ddd;
     padding: 10px;
     z-index: 10;
@@ -111,6 +111,7 @@ header .drop-down ul li a{
     display: flex;
     color: rgb(0,0,0);
     padding-block: 10px;
+    font-weight: 400;
 }
 header .drop-down ul li :hover{
     background-color: #fafafa;
@@ -120,12 +121,40 @@ header .drop-down ul li :hover{
 @media(max-width: 900px){
     header .drop-down{
         display: flex;
+
     }
     header .main-nav{
         display: none;
     }
 }
     /* header */
+    /* Back ground */
+.bg{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -50%;
+    left: -50%;
+    z-index: -5;
+    opacity: .5;
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #ff95003b 50%, #1e699b63 50%);
+}
+@keyframes slide{
+    0%{
+        transform: translateX(-25%);
+    }
+    100%{
+        transform: translateX(25%);
+    }
+}
+.bg2{
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+.bg3{
+    animation-duration: 5s;
+}
     /* spiecialites */
 
 
