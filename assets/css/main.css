@@ -126,6 +126,42 @@ header .drop-down ul li :hover{
     }
 }
     /* header */
+    /* Welcoming */
+.Welcoming{
+    background-color: #dddddd21;
+
+}
+.Welcoming .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 40px;
+    flex-wrap: wrap;
+}
+.Welcoming .w{
+    margin-left: 20px;
+}
+.Welcoming .p {
+    font-size: 1rem;
+}
+.Welcoming h1 {
+    font-size: 3rem;
+    letter-spacing: 6px;
+    color: rgb(61, 63, 199);
+    margin-block:0px 30px ;
+}
+.Welcoming .p2 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: #ff2d55;
+}
+.logo-container{
+    width: 30vw;
+}
+.logo-container img{
+    width: 100%;
+}
+
     /* courses */
     
 .courses{
